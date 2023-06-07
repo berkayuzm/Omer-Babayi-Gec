@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Ömer Baba'yı Geç",
+    "description": "Youtube üzerinde Kurtlar Vadisi izlerken Ömer Baba sahnelerini otomatik olarak geçer.",
+    "version": "1.0",
+    "icons": {
+      "16": "images/omer_baba_16.png",
+      "48": "images/omer_baba_48.png",
+      "128": "images/omer_baba_128.png"
+    },
+    "action": {
+        "default_popup": "popup.html"
+      },
+      "background": {
+        "service_worker": "scripts/background.js"
+      },
+      "permissions": [
+        "tabs"
+    ],
+    "content_scripts": [
+        {
+          "js": ["scripts/content.js"],
+          "matches": ["http://*/*", "https://*/*"]
+        }
+      ]
+      
+ 
+  }
